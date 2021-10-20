@@ -1,0 +1,26 @@
+body { 
+    min-width: 400px; 
+    background-color: rgb(253, 253, 253);
+    min-height: 0px;
+}
+header{
+    min-width: 400px;   
+}
+
+#logoEmpresa{max-width: 80px; height: 100%;}
+#headerMenu{width: auto; margin: 3px 0px 0px 20px;}
+#headerMenuRight {display: none}
+#headerCenter{width: 100%; height: 100%}
+#shadow{min-width: 400px;}
+#logoOver{display: none}
+.estacaoFoto{display: none}
+#direita{min-height: 0px}
+.infoIcons{width: 30px;height: 30px;}
+
+//Ultimos dados
+#slider{display:none!important;}
+#sidebar{display:none!important;}
+#menuTree-mobile{display: block;}
+.thImage {width: 32px!important;}
+.thTitulo {font-size: 14px!important;}
+table.table1 {font-size: 12px!important; float:left;}

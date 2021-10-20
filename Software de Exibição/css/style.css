@@ -1,0 +1,203 @@
+@font-face {
+    font-family: "Gotham Bold";
+    src: url("../fonts/Gotham-Bold.otf");
+}
+@font-face {
+    font-family: "Gotham Light";
+    src: url("../fonts/Gotham-Light.otf");
+}
+@font-face {
+    font-family: "Gotham Medium";
+    src: url("../fonts/Gotham-Medium.otf");
+}
+@font-face {
+    font-family: "Gotham Thin";
+    src: url("../fonts/Gotham-Thin.otf");
+}
+
+* { 
+    line-height: 18px;
+    box-sizing: initial;
+}
+
+body { 
+    /*min-width: 1280px;*/ 
+    min-width: 1400px; 
+    background-color: rgb(253, 253, 253);
+    min-height: 800px;
+}
+html, body, #map-canvas {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    transition: margin-left .5s;    
+}
+header {
+    width: calc(100% - 150px);
+    height: 80px;
+    z-index: 5000;
+    background-color: white;
+    min-width: 600px;
+    position: absolute;
+    border-bottom: 1px solid #189488;    
+    transition: margin-left .5s;        
+    margin: 0px 75px 0px 75px;
+}
+#headerDados text {
+    color: #333;
+    font-family: 'Gotham Medium';
+    font-size: 20px;
+    margin-right: 5px;
+    margin-left: 70px;
+}
+
+#content {
+    height: 100%;
+    width: calc(100% - 150px);
+    float: left;
+    margin: 85px 75px 0px 75px;
+}
+
+#headerDireita {
+    height: 100%;
+    float: right;
+}
+#headerEsquerda {
+    float: left; 
+    height: 100%;    
+}
+
+#direita {
+    width: 655px;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    z-index: 10000;
+    margin-right: 10px;
+    border-radius: 7px;
+    //background-color: rgba(13, 120, 160, 0.1);
+    background-color: rgba(46, 63, 71, 0.75);    
+    display: none;    
+}
+.tabelaTitulo {
+    font-weight: bold;
+    font-size: 13px;
+    font-family: 'Gotham Light', sans-serif;
+    color: #616060;
+    max-width: 60px;
+}
+.tabelaInfo {
+    font-size: 13px;
+    font-family: 'Gotham Light', sans-serif;
+    //color: #616060;
+    color: #e7e7e8;
+}
+.tabelaInfoGeracao {
+    font-size: 13px;
+    font-family: 'Gotham Light', sans-serif;
+    //color: #616060;
+    color: #616060;
+}
+.infoIcons{float: left; width: 48px; height: 48px; margin: 5px 10px 5px 5px; opacity: 1;}
+.infoIconsKirpich{float: left; width: 36px; height: 36px; margin: 0px 10px 5px 5px; opacity: 1;}
+#closeDireita {width: 18px; height: 18px; position: absolute; right: 15px; cursor: pointer;}
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+
+#map-canvas {min-height: 700px; margin-left: 250px;}
+#estacaoStatus{float: left; margin: 5px;}
+
+
+#headerDados img {}
+#dataPicker {float: right}
+#dataPickerMeteo {float: right}
+#dataPickerBalanco {float: right}
+#dataPickerPesquisa {float: left}
+#chart{float: left; width: 100%;}
+#chart2{float: left; width: 100%;}
+#dadosChart{float: left; display: none; padding: 5px;}
+#dadosChartContent {
+    margin-top: 10px;
+    width: 100%;
+    float: left;	
+    background-color: rgb(253, 253, 253);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+label.labelCheckLayers {
+    background-image:url("../img/checkbox.png");
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+hr.style-two {
+    margin: 2px;
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+}
+
+hr.style-three {
+    margin: 10px 2px 2px 2px;
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(5, 5, 5, 0.02), rgba(194, 189, 189, 0.75), rgba(5,5,5,0.02)); 
+    background-image:    -moz-linear-gradient(left, rgba(5, 5, 5, 0.02), rgba(194, 189, 189, 0.75), rgba(5,5,5,0.02)); 
+    background-image:     -ms-linear-gradient(left, rgba(5, 5, 5, 0.02), rgba(194, 189, 189, 0.75), rgba(5,5,5,0.02)); 
+    background-image:      -o-linear-gradient(left, rgba(5, 5, 5, 0.02), rgba(194, 189, 189, 0.75), rgba(5,5,5,0.02)); 
+}
+.exportIcons {
+    width: 64px;
+    height: 64px;
+    margin: 5px 0px 5px 15px;
+}
+
+#protocolIcon{
+    margin: -8px 10px 5px 10px;
+    width: 48px;
+    height: 48px;
+    float: left;
+    position: absolute;
+    z-index: 100;
+}
+
+#exportCenter {
+    margin: 0 auto;
+    width: 250px;
+}
+
+#datepicker {
+    padding: 5px 0px 5px 0px;
+    border-radius:2px;
+    border: 1px solid #98d0f1;
+    font-family: Lucida Grande,Lucida Sans,Arial,sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    width: 200px;
+    position: relative;
+    top: -5px;
+    text-align: center;
+    //color: #219EFF;
+    color: #e17009;
+}
+
+#hdEsquerda{
+    float: left;
+}
+
+#hdDireita{
+    float: right;
+    margin-right: 20px;
+    width: 668px;
+    margin-top: 9px;
+}
+
+
